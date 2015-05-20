@@ -26,9 +26,8 @@ int main(int argc, char* argv[]){
     int hosts_len = 0;
     char* cmd=NULL;
     
-    while((result=getopt(argc,argv,"tu:h:c:"))!=-1){
+    while((result=getopt(argc,argv,"u:h:c:"))!=-1){
         switch(result){
-            case 't':puts("test mode");break;
             case 'u':
                 usr=strdup(optarg);break;
             case 'h':
