@@ -33,7 +33,7 @@ int main(int argc, char* argv[]){
     int ip_start=0;
     int ip_end=0;
     char* master_host = NULL;
-
+    
     while((result=getopt(argc,argv,"u:h:c:s:S:E:H:"))!=-1){
         switch(result){
             case 'u':
@@ -57,8 +57,8 @@ int main(int argc, char* argv[]){
             case ':':
             case '?':
                 usage(0);break;
-        }   
-    }    
+        }
+    }
     if(master_host == NULL){
         if(usr==NULL||hosts_len==0||cmd==NULL||strlen(usr)==0||strlen(cmd)==0)usage(0);
     }else{
@@ -110,5 +110,5 @@ int main(int argc, char* argv[]){
             if(sleep_sec>0 && i != ip_end)sleep(sleep_sec);
         }
     }
-    return 0;
+    return 0;      
 }
